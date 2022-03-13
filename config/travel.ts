@@ -5,7 +5,7 @@ const DATA = [
         id: '1384354'
     },
     {
-        imageUri: 'https://cdn-icons.flaticon.com/png/512/3913/premium/3913712.png?token=exp=1647160234~hmac=071a44973f16da3141a13f66c4cdeac4',
+        imageUri: 'https://cdn-icons.flaticon.com/png/512/3913/premium/3913712.png',
         title: 'See',
         id: '12435434154'
     },

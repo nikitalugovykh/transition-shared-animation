@@ -3,8 +3,13 @@ import MarkettingSlider from "../components/MarkettingSlider"
 import { DATA } from "../config/travel"
 import { SPACING } from "../config/theme"
 import Icon from "../components/Icon"
+import { useNavigation } from "@react-navigation/native"
+import { SharedElement } from "react-navigation-shared-element"
 
 function List() {
+
+    const navigation: any = useNavigation()
+
     return (
         <SafeAreaView style={{ flex: 1 }}>
             <MarkettingSlider />
@@ -22,8 +27,14 @@ function List() {
                             style={{
                                 padding: SPACING
                             }}
+                            onPress={() => navigation.navigate('Detail', { item })}
                         >
-                            <Icon uri={item.imageUri} />
+                            <SharedElement
+                                id={`item.${item.id}.icon`}
+                            >
+                                <Icon uri={item.imageUri} />
+
+                            </SharedElement>
                         </TouchableOpacity>
                     )
                 })}
