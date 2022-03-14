@@ -1,17 +1,21 @@
-import { useNavigation, useRoute } from "@react-navigation/native"
+import { Route, RouteProp, useNavigation, useRoute } from "@react-navigation/native"
 import { FC, useEffect, useRef } from "react"
 import { Animated, FlatList, ScrollView, Text, TouchableOpacity, View } from "react-native"
 import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context"
 import { SharedElement } from "react-navigation-shared-element"
 import BackIcon from "../components/BackIcon"
 import Icon from "../components/Icon"
+import { Routes } from "../config/navigation"
 import { ICON_SIZE, SPACING, width } from "../config/theme"
 import { DATA } from "../config/travel"
+import { RootStackParamList } from "../config/types"
 
+
+type DetailRouteProps = RouteProp<RootStackParamList, Routes.DETAIL_SCREEN>
 
 const Detail = () => {
     const navigation = useNavigation()
-    const route: any = useRoute().params
+    const route = useRoute<DetailRouteProps>().params
 
     const item = route.item
     const ref = useRef<FlatList>(null)
