@@ -73,7 +73,7 @@ const Detail = () => {
                 style={{
                     flexDirection: 'row',
                     flexWrap: 'nowrap',
-                    marginVertical: 20,
+                    marginBottom: 20,
                     marginLeft: width / 2 - ICON_SIZE / 2 - SPACING,
                     transform: [{ translateX }]
                 }}

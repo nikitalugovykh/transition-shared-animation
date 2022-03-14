@@ -13,6 +13,9 @@ import NavigationList from './screens/NavigationList';
 import TravelList from './screens/TravelList';
 import TravelDetail from './screens/TravelDetail';
 
+
+import 'react-native-gesture-handler';
+
 // enableScreens()
 
 const Stack = createSharedElementStackNavigator()
@@ -49,7 +52,7 @@ export default function App() {
 
                 {navigation.map((item) => {
                     return (
-                        <Stack.Screen name={item.name} component={item.component} />
+                        <Stack.Screen key={item.name} name={item.name} component={item.component} />
                     )
                 })}
 

@@ -8,15 +8,17 @@ import { SharedElement } from "react-navigation-shared-element"
 import { navigation } from "../config/navigation"
 import { StackNavigationProp } from "@react-navigation/stack"
 import { RootStackParamList } from "../config/types"
+import { useSafeAreaInsets } from "react-native-safe-area-context"
 
 type NavigationListNavProps = StackNavigationProp<RootStackParamList>
 
 function NavigationList() {
 
     const navigationRoute = useNavigation<NavigationListNavProps>()
+    const { top } = useSafeAreaInsets()
 
     return (
-        <SafeAreaView style={{ flex: 1, backgroundColor: '#f0f0f0' }}>
+        <View style={{ flex: 1, paddingTop: top }}>
            {navigation.map((item, index) => {
                return (
                    <View key = {index.toString()}>
@@ -25,7 +27,7 @@ function NavigationList() {
                    </View>
                )
            })}
-        </SafeAreaView>
+        </View>
     )
 }
 

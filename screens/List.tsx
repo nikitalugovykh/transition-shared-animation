@@ -9,6 +9,7 @@ import { SharedElement } from "react-navigation-shared-element"
 import { StackNavigationProp } from "@react-navigation/stack"
 import { RootStackParamList } from "../config/types"
 import { Routes } from "../config/navigation"
+import { useSafeAreaInsets } from "react-native-safe-area-context"
 
 
 type ListNavProps = StackNavigationProp<RootStackParamList>
@@ -17,8 +18,12 @@ function List() {
 
     const navigation = useNavigation<ListNavProps>()
 
+    const { top } = useSafeAreaInsets()
+
     return (
-        <SafeAreaView style={{ flex: 1 }}>
+        <View 
+            style={{ flex: 1, paddingTop: top }}
+        >
             <AntDesign name={'arrowleft'} size = {20} onPress = {() => navigation.goBack()} style = {{paddingLeft: SPACING}}/>
             <MarkettingSlider />
             <View style={{
@@ -47,7 +52,7 @@ function List() {
                     )
                 })}
             </View>
-        </SafeAreaView>
+        </View>
     )
 }
 

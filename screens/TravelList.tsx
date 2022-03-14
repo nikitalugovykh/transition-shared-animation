@@ -30,6 +30,7 @@ const TravelList = () => {
                 data={LOCATIONS}
                 keyExtractor={(item) => item.key}
                 horizontal
+                // contentContainerStyle = {{height: ITEM_HEIGHT}}
                 showsHorizontalScrollIndicator={false}
                 snapToInterval={FULL_SIZE}
                 decelerationRate={'fast'}
