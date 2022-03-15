@@ -15,6 +15,7 @@ import TravelDetail from './screens/TravelDetail';
 
 
 import 'react-native-gesture-handler';
+import TravelUpDetail from './screens/TravelUpDetail';
 
 // enableScreens()
 
@@ -81,6 +82,26 @@ export default function App() {
                             },
                             {
                                 id: `item.${item.key}.location`
+                            },
+                        ]
+
+                    }}
+                    // @ts-ignore
+                    options={options}
+                />
+                <Stack.Screen
+                    name={Routes.TRAVEL_UP_DETAIL_SCREEN}
+                    component={TravelUpDetail}
+                    sharedElements={(route, otherRoute, showing) => {
+                        const { item } = route.params
+                        // return DATA.map((item) => `item.${item.id}.photo`)
+
+                        return [
+                            {
+                                id: `item.${item.key}.image`
+                            },
+                            {
+                                id: `item.${item.key}.name`
                             },
                         ]
 

@@ -22,7 +22,6 @@ function NavigationList() {
            {navigation.map((item, index) => {
                return (
                    <View key = {index.toString()}>
-                       
                        <Button title={item.label} onPress = {() => navigationRoute.navigate(item.name)}/>
                    </View>
                )

@@ -140,5 +140,29 @@ const LOCATIONS = [
     },
 ]
 
+const AVATARS = [
+    {
+        uri: 'https://images.unsplash.com/photo-1584646098378-0874589d76b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80',
+        id: '1'
+    },
+    {
+        uri: 'https://images.unsplash.com/photo-1509136561942-7d8663edaaa2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80',
+        id: '2'
+    },
+    {
+        uri: 'https://images.unsplash.com/photo-1567669721460-221b82865ee0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+        id: '3'
+    },
+    {
+        uri: 'https://images.unsplash.com/photo-1472791108553-c9405341e398?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1237&q=80',
+        id: '4'
+    },
+    {
+        uri: 'https://images.unsplash.com/photo-1611919965397-fa051b945824?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1132&q=80',
+        id: '5'
+    },
+]
 
-export { DATA, SLIDER_DATA, LOCATIONS }
+
+
+export { DATA, SLIDER_DATA, LOCATIONS, AVATARS }

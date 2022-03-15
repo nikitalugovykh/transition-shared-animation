@@ -8,6 +8,10 @@ export type RootStackParamList = {
     travel_screen: undefined,
     travel_detail_screen: {
         item: DataTravelListType
+    },
+    travel_up_screen: undefined,
+    travel_up_detail_screen: {
+        item: DataTravelListType
     }
 
 }
