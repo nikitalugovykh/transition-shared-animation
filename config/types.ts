@@ -12,7 +12,9 @@ export type RootStackParamList = {
     travel_up_screen: undefined,
     travel_up_detail_screen: {
         item: DataTravelListType
-    }
+    },
+    photography_list_screen: undefined,
+    photography_detail_screen: undefined,
 
 }
 

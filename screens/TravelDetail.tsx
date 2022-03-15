@@ -8,6 +8,7 @@ import { Routes } from "../config/navigation"
 import { Travel2Spec, width } from './../config/theme'
 import { SharedElement } from "react-navigation-shared-element"
 import * as Animatable from 'react-native-animatable'
+import { useRef } from "react"
 
 const { ITEM_WIDTH, ITEM_HEIGHT, RADIUS, SPACING, FULL_SIZE } = Travel2Spec
 
@@ -18,6 +19,8 @@ const TravelDetail = () => {
     const navigation = useNavigation()
     const { item } = useRoute<TravelDetailRouteProps>().params
     const { top } = useSafeAreaInsets()
+
+    const refView = useRef<Animatable.View & View>(null)
 
 
     const zoomIn = {
@@ -38,7 +41,12 @@ const TravelDetail = () => {
                 size={20}
                 color={'#000'}
                 style={{ padding: SPACING, zIndex: 2 }}
-                onPress={() => navigation.goBack()}
+                onPress={() => {
+
+
+                        navigation.goBack()
+
+                }}
             />
             <SharedElement id={`item.${item.key}.photo`} style={StyleSheet.absoluteFillObject}>
                 <View style={styles.wrapper}>
@@ -58,11 +66,12 @@ const TravelDetail = () => {
                     showsHorizontalScrollIndicator={false}
                     renderItem={({ item, index }) => {
                         return (
-                            <Animatable.View 
+                            <Animatable.View
+                                ref={refView}
                                 style={{ backgroundColor: '#fff', padding: SPACING, width: width * .35, height: width * 0.48, marginRight: SPACING }}
-                                duration = {800}
-                                animation = {zoomIn}
-                                delay = {500 + (index * 100)}    
+                                duration={800}
+                                animation={zoomIn}
+                                delay={500 + (index * 100)}
                             >
                                 <Image
                                     source={{ uri: 'https://images.unsplash.com/photo-1478860409698-8707f313ee8b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80' }}

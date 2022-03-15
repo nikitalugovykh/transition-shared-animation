@@ -1,4 +1,5 @@
 import List from "../screens/List";
+import PhotographyList from "../screens/PhotographyList";
 import TravelList from "../screens/TravelList";
 import TravelUpList from "../screens/TravelUpList";
 import { NavigationType } from "./types";
@@ -16,6 +17,9 @@ export const enum Routes{
 
     TRAVEL_UP_LIST_SCREEN = 'travel_up_list_screen',
     TRAVEL_UP_DETAIL_SCREEN = 'travel_up_detail_screen',
+
+    PHOTOGRAPHY_LIST_SCREEN = 'photography_list_screen',
+    PHOTOGRAPHY_DETAIL_SCREEN = 'photography_detail_screen',
 }
 
 
@@ -34,6 +38,11 @@ export const navigation: NavigationType[] = [
         label: 'Shared animation #3',
         name: Routes.TRAVEL_UP_LIST_SCREEN,
         component: TravelUpList
+    },
+    {
+        label: 'Shared animation #4',
+        name: Routes.PHOTOGRAPHY_LIST_SCREEN,
+        component: PhotographyList
     },
 ] 
 

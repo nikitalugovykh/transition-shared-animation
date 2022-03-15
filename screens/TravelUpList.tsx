@@ -129,7 +129,7 @@ const TravelUpList = () => {
                             return (
                                 <Animated.View style={[{ position: 'absolute', transform: [{ translateY }, { scale }], opacity }]}>
                                     <Pressable
-                                        // onPress={() => navigation.navigate(Routes.TRAVEL_UP_DETAIL_SCREEN, {item: LOCATIONS[activeIndex]})}
+                                        onPress={() => navigation.navigate(Routes.TRAVEL_UP_DETAIL_SCREEN, {item: LOCATIONS[activeIndex]})}
                                     >
                                         <View>
                                             <SharedElement id={`item.${item.key}.image`}>
